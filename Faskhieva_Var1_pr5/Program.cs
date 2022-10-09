@@ -17,7 +17,6 @@ namespace Faskhieva_Var1_pr5
         {
             Console.WriteLine("{0,-15} {1,-15} {2,-15} {3, -15} {4, -15}", day, month, year, horos, horEast);
         }
-
         public string concat()
         {
             return day + ";" + month + ";" + year + ";" + horos + ";" + horEast;
@@ -63,7 +62,7 @@ namespace Faskhieva_Var1_pr5
             for (int i = 0; i < L.Count; i++)
             {
                 Horoscope h = L[i];
-                int forParse = 0;
+                int forParse;
 
                 if (h.day == "" || h.month == "" || !int.TryParse(h.day, out forParse) || !int.TryParse(h.month, out forParse))
                 {
@@ -122,7 +121,7 @@ namespace Faskhieva_Var1_pr5
                 }
                 if (h.year == "" || !int.TryParse(h.year, out forParse))
                 {
-                    h.horEast = "Невозможно определить Восточный гороскоп!";
+                    h.horEast = "Не определить Восточный гороскоп!";
                 }
                 else
                 {
